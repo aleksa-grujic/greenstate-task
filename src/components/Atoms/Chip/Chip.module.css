@@ -1,0 +1,36 @@
+.chip {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+.chip.small {
+  padding: 8px 12px;
+  font-size: 12px;
+  display: inline-flex;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+.chip.success {
+  background-color: rgba(var(--system-success), 0.1);
+  color: rgb(var(--system-success));
+}
+.chip.warning {
+  background-color: rgba(var(--system-warning), 0.1);
+  color: rgb(var(--system-warning));
+}
+.chip.danger {
+  background-color: rgba(var(--system-danger), 0.1);
+  color: rgb(var(--system-danger));
+}

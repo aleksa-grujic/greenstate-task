@@ -1,0 +1,22 @@
+.paginationItem {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: var(--neutrals-0);
+  color: var(--neutrals-300);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+}
+.paginationItem.active {
+  background: var(--Primary---CTA, #7e44f8);
+  color: var(--neutrals-0);
+}

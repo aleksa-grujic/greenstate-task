@@ -1,0 +1,24 @@
+.radio {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background-color: var(--neutrals-0);
+  border: 1px solid var(--neutrals-100);
+  box-sizing: border-box;
+}
+.active {
+  background-color: var(--primary-cta);
+  border-color: var(--primary-cta);
+}
+.disabled {
+  background-color: var(--neutrals-50);
+  border-color: var(--neutrals-100);
+}
+.error {
+  border-color: rgb(var(--system-danger));
+}
+.active-radio {
+  width: 4px;
+  height: 4px;
+  background-color: var(--neutrals-0);
+}
