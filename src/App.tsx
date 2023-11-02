@@ -4,26 +4,16 @@ import "./App.css";
 import Input from "./components/Atoms/Input/Input";
 import Button from "./components/Atoms/Button/Button";
 import Chip from "./components/Atoms/Chip/Chip";
+import AppRoutes from "./AppRoutes";
+import { RouterProvider } from "react-router-dom";
+import AuthProvider from "./contexts/AuthContext";
 
 function App() {
-  const [text, setText] = React.useState("");
   return (
     <div className="App">
-      <Input
-        label="test"
-        placeholder="test"
-        value={text}
-        onChange={(e) => {
-          setText(e.target.value);
-        }}
-      />
-      <Button
-        text="test123"
-        onClick={() => console.log("click")}
-        leftIcon="loading"
-        size="medium"
-      />
-      <Chip type="High" size="small" />
+      <AuthProvider>
+        <AppRoutes />
+      </AuthProvider>
     </div>
   );
 }

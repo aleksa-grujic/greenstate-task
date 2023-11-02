@@ -1,12 +1,14 @@
-import { ChangeEventHandler } from "react";
-
 export type InputProps = {
   label: string;
   value: string;
-  onChange: ChangeEventHandler<HTMLInputElement>;
+  onChange: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
+
   placeholder?: string;
   type?: string;
   disabled?: boolean;
   error?: string;
-  className?: string;
+  name: string;
+  isTextarea?: boolean;
 };

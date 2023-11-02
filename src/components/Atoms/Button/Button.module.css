@@ -8,7 +8,6 @@
   border-radius: 8px;
   background-color: var(--primary-cta);
   border: none;
-  width: auto;
 }
 
 .button:hover {

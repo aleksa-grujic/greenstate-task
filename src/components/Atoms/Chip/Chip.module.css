@@ -3,13 +3,13 @@
   padding: 8px 12px;
   justify-content: center;
   align-items: center;
-
   gap: 10px;
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
+  border-radius: 12px;
 }
 .chip.small {
   padding: 8px 12px;

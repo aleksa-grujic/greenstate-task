@@ -2,9 +2,13 @@
   width: 20px;
   height: 20px;
   flex-shrink: 0;
+  border-radius: 20px;
   background-color: var(--neutrals-0);
   border: 1px solid var(--neutrals-100);
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .active {
   background-color: var(--primary-cta);
@@ -17,8 +21,9 @@
 .error {
   border-color: rgb(var(--system-danger));
 }
-.active-radio {
-  width: 4px;
-  height: 4px;
+.activeRadio {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
   background-color: var(--neutrals-0);
 }

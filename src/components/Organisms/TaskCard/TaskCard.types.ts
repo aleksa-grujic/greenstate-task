@@ -1,13 +1,7 @@
-type Task = {
-  id: string;
-  title: string;
-  description: string;
-  done: boolean;
-  createdAt: string;
-  updatedAt: string;
-  priority: "High" | "Medium" | "Low";
-};
+import { Task } from "../../../constants/types";
 
 export type TaskCardProps = {
   task: Task;
+  onEdit: (task: Task) => void;
+  onDelete: (id: string) => void;
 };

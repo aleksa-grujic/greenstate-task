@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 86px;
+}
+.title {
+  color: var(--neutrals-400, #181e25);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px; /* 100% */
+}
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}

@@ -1,0 +1,10 @@
+.iconButton {
+  display: flex;
+  height: 32px;
+  width: 32px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  background: rgba(var(--system-danger), 0.1);
+}

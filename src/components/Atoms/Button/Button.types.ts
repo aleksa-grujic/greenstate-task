@@ -9,4 +9,5 @@ export type ButtonProps = {
   type?: "button" | "submit" | "reset";
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
+  className?: string;
 };

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { RadioProps } from "./Radio.types";
-import styles from "./Button.module.css";
+import styles from "./Radio.module.css";
 
 const Radio: FC<RadioProps> = ({ active, disabled, error, onClick }) => {
   return (
@@ -9,7 +9,9 @@ const Radio: FC<RadioProps> = ({ active, disabled, error, onClick }) => {
         error ? styles.error : ""
       }  ${disabled ? styles.disabled : ""}`}
       onClick={onClick}
-    />
+    >
+      {active && <div className={styles.activeRadio} />}
+    </div>
   );
 };
 

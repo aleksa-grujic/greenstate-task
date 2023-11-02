@@ -7,22 +7,40 @@ const Input: FC<InputProps> = ({
   placeholder,
   value,
   onChange,
-  type = "rest",
+  type,
   disabled,
   error,
-  className,
+  name,
+  isTextarea,
 }) => {
   return (
-    <div>
-      <label className={`${styles.label} ${styles[type] ?? ""}`}>{label}</label>
-      <input
-        className={`${styles.input}`}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        disabled={disabled}
-      />
-      {error && <p className={styles.error}>{error}</p>}
+    <div className={styles.container}>
+      <label className={styles.label} htmlFor={name}>
+        {label}
+      </label>
+      {isTextarea ? (
+        <textarea
+          id={name}
+          className={styles.input}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          disabled={disabled}
+          rows={5}
+        />
+      ) : (
+        <input
+          id={name}
+          type={type}
+          className={styles.input}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          disabled={disabled}
+        />
+      )}
+
+      <span className={styles.error}>{error || ""}</span>
     </div>
   );
 };

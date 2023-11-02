@@ -1,20 +1,30 @@
 import { FC } from "react";
 import styles from "./Icon.module.css";
 import { IconProps } from "./Icon.types";
-import { ReactComponent as DeleteSVG } from "../../../assets/delete.svg";
-import { ReactComponent as EditSVG } from "../../../assets/edit.svg";
-import { ReactComponent as LoadingSVG } from "../../../assets/loading.svg";
-import { ReactComponent as LogoutSVG } from "../../../assets/logout.svg";
-import { ReactComponent as ValidateSVG } from "../../../assets/validate.svg";
+import DeleteSVG from "./Icons/DeleteSVG";
+import EditSVG from "./Icons/EditSVG";
+import LoadingSVG from "./Icons/LoadingSVG";
+import LogoutSVG from "./Icons/LogoutSVG";
+import ValidateSVG from "./Icons/ValidateSVG";
 
-const Icon: FC<IconProps> = ({ icon }) => {
+const Icon: FC<IconProps> = ({ icon, width, height, color }) => {
   return (
     <div className={styles.icon}>
-      {icon === "delete" && <DeleteSVG />}
-      {icon === "edit" && <EditSVG />}
-      {icon === "loading" && <LoadingSVG />}
-      {icon === "log out" && <LogoutSVG />}
-      {icon === "validate" && <ValidateSVG />}
+      {icon === "delete" && (
+        <DeleteSVG width={width} height={height} stroke={color} />
+      )}
+      {icon === "edit" && (
+        <EditSVG width={width} height={height} stroke={color} />
+      )}
+      {icon === "loading" && (
+        <LoadingSVG width={width} height={height} stroke={color} />
+      )}
+      {icon === "log out" && (
+        <LogoutSVG width={width} height={height} stroke={color} />
+      )}
+      {icon === "validate" && (
+        <ValidateSVG width={width} height={height} stroke={color} />
+      )}
     </div>
   );
 };

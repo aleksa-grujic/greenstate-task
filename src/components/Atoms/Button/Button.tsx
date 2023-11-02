@@ -10,30 +10,28 @@ const Button: FC<ButtonProps> = ({
   disabled,
   leftIcon,
   rightIcon,
-  rToggle,
-  lToggle,
-  txtVisible,
+  className,
+  rToggle = false,
+  lToggle = false,
+  txtVisible = true,
 }) => {
   return (
-    console.log("icon", leftIcon),
-    (
-      <button
-        onClick={onClick}
-        disabled={disabled}
-        type={type}
-        className={`${styles.button} ${styles[size]}`}
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      type={type}
+      className={`${styles.button} ${styles[size]} ${className || ""}`}
+    >
+      {leftIcon && !lToggle && <Icon icon={leftIcon} />}
+      <span
+        className={`${styles.buttonText} ${styles[size]} ${
+          disabled ? styles.disabled : ""
+        }`}
       >
-        {leftIcon && <Icon icon={leftIcon} />}
-        <span
-          className={`${styles.buttonText} ${styles[size]} ${
-            disabled ? styles.disabled : ""
-          }`}
-        >
-          {text}
-        </span>
-        {rightIcon && <Icon icon={rightIcon} />}
-      </button>
-    )
+        {txtVisible ? text : ""}
+      </span>
+      {rightIcon && !rToggle && <Icon icon={rightIcon} />}
+    </button>
   );
 };
 

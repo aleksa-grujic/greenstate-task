@@ -1,3 +1,8 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 :root {
   --system-danger: 255, 66, 66;
   --system-success: 47, 200, 80;
@@ -17,4 +22,5 @@ body {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--neutrals-50, #f3f4f8);
 }
