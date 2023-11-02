@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+## Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a test project for managing tasks, developed using the React library with Create-React-App and TypeScript.
 
-## Available Scripts
+## Project Setup
 
-In the project directory, you can run:
+To set up the project, install the dependencies using `yarn`, and then run `yarn start` to launch the application on `localhost:3000`.
 
-### `yarn start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The project encompasses the following functionalities:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- User Login
+- User Registration
+- Task Creation
+- Task Editing
+- Task Deletion
+- Pagination
+- Task Filtering by Priority
+- User Logout
 
-### `yarn test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The main project structure consists of:
 
-### `yarn build`
+- `Index.tsx` alongside `index.css`
+- `App.tsx` alongside `App.css`
+- `AppRoutes.tsx` for handling UI routes based on user authentication status
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project is organized into the following directories:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Api
+- Assets
+- Components
+  - Atoms
+  - Molecules
+  - Organisms
+- Constants
+- Contexts
+- Hooks
+- Pages
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The `Components` directory is further organized into `Atoms`, `Molecules`, and `Organisms`, each containing three files: `ComponentName.tsx`, `ComponentName.types.ts`, and `ComponentName.module.css`. These components are focused solely on the UI, devoid of any application logic.
 
-### `yarn eject`
+The `Pages` directory assembles the entire layout and contains the logic, while the core business logic is encapsulated within the `Hooks` directory, orchestrating all operations around Authentication and Task management.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Implementation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Initially, the focus was on establishing a complete Design System, ensuring each component mirrored its design specification. The subsequent step involved creating pages with mock data and the intended layout.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Following the layout phase, the API integration was performed to establish communication with the backend. Custom hooks were then developed to utilize these API calls for data manipulation and representation.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Finally, the data was integrated with the UI, and a thorough verification was carried out to ensure all functionalities operated as expected.
