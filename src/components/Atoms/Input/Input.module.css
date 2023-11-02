@@ -12,6 +12,7 @@
   border-radius: 12px;
   border: 1px solid var(--neutrals-100, #c9d2de);
   background: var(--neutrals-0, #fff);
+  font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;

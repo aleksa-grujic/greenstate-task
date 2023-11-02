@@ -1,9 +1,3 @@
-import {
-  Route,
-  Routes,
-  createBrowserRouter,
-  createRoutesFromElements,
-} from "react-router-dom";
 import Auth from "./pages/Auth/Auth";
 import { useContext } from "react";
 import { AuthContext } from "./contexts/AuthContext";
